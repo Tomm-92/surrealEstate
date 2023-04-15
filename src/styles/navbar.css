@@ -1,0 +1,26 @@
+.navBar {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.surreal-logo {
+  height: 100px;
+  width: 350px;
+  display: -webkit-box;
+  margin: auto;
+}
+
+.navbar-links {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-links-item {
+  margin: 0;
+  padding: 5px;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
