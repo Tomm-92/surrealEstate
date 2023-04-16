@@ -1,8 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import App from '../components/App';
+import React from "react";
+import { render } from "@testing-library/react";
+import App from "../components/App";
 
-test('renders the page header', () => {
-  render(<App />);
-  const headerElement = screen.getByText(/Surreal Estate/i);
-  expect(headerElement).toBeInTheDocument();
+describe("App", () => {
+  it("renders correctly", () => {
+    const { asFragment } = render(<App />);
+    expect(asFragment()).toMatchSnapshot();
+  });
 });
