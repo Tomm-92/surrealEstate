@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddProperty renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="property-title"
+  >
+    Stub Title
+  </div>
+  <div
+    class="property-type"
+  >
+    Stub Type
+  </div>
+  <div
+    class="property-bathrooms"
+  >
+    2
+  </div>
+  <div
+    class="property-bedrooms"
+  >
+    3
+  </div>
+  <div
+    class="property-price"
+  >
+    100000
+  </div>
+  <div
+    class="property-city"
+  >
+    Manchester
+  </div>
+  <div
+    class="property-email"
+  >
+    M.Salah@gmail.com
+  </div>
+</DocumentFragment>
+`;

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Properties = () => {
-  return <div> Properties Page </div>;
+  return <div> Property Summary </div>;
 };
 
 export default Properties;
