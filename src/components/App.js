@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/app.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -13,10 +13,15 @@ import Properties from "./Properties";
 import AddProperty from "./AddProperty";
 
 const App = () => {
+  const [userID, setUserID] = useState("");
+  const handleLogin = (response) => {
+    setUserID(response.userID);
+  };
+
   return (
     <Router>
       <div className="App">
-        <NavBar />
+        <NavBar userID={userID} onLogin={handleLogin} />
         <Routes>
           <Route path="/" element={<Properties />} />
           <Route path="/add-property" element={<AddProperty />} />
