@@ -9,6 +9,7 @@ import "../styles/properties.css";
 const Properties = () => {
   const [properties, setProperties] = useState([]);
   const [alert, setAlert] = useState({ message: "" });
+  const { search } = useLocation();
 
   useEffect(() => {
     axios
@@ -23,12 +24,15 @@ const Properties = () => {
       );
   }, []);
 
-  const { search } = useLocation();
   useEffect(() => {
     axios
       .get(`http://localhost:4000/api/v1/PropertyListing${search}`)
       .then(({ data }) => setProperties(data))
-      .catch((err) => console.error(err));
+      .catch(() =>
+        setAlert({
+          message: "Server error. Please come back later =(",
+        })
+      );
   }, [search]);
 
   return (

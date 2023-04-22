@@ -18,10 +18,14 @@ const App = () => {
     setUserID(response.userID);
   };
 
+  const handleLogout = () => {
+    window.FB.logout(setUserID(""));
+  };
+
   return (
     <Router>
       <div className="App">
-        <NavBar userID={userID} onLogin={handleLogin} />
+        <NavBar userID={userID} onLogin={handleLogin} onLogout={handleLogout} />
         <Routes>
           <Route path="/" element={<Properties />} />
           <Route path="/add-property" element={<AddProperty />} />
