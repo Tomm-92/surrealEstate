@@ -1,20 +1,16 @@
 import React from "react";
 import axios from "axios";
 
-const FavouriteCard = ({ propertyListing, _id, title, price, city }) => {
+const FavouriteCard = ({ _id, propertyListing }) => {
   const handleDeleteFavourite = () => {
-    axios.delete(
-      `http://localhost:4000/api/v1/Favourite/644526c94d7cd867b8199044`
-    );
-    console.log(propertyListing);
-    console.log(_id);
+    axios.delete(`http://localhost:4000/api/v1/Favourite/${_id}`);
   };
   return (
     <div className="favourite-card">
-      <div> {_id} </div>
-      <div>{title} </div>
-      <div>{city} </div>
-      <div> {price} </div>
+      <div> {propertyListing._id} </div>
+      <div>{propertyListing.title} </div>
+      <div>{propertyListing.city} </div>
+      <div> {propertyListing.price} </div>
       <button
         onClick={handleDeleteFavourite}
         type="submit"

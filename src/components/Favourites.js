@@ -30,7 +30,7 @@ const Favourites = ({ _id, title }) => {
       <Sidebar />
       {favourites.map((response) => (
         <div key={response._id} className="item">
-          <FavouriteCard {...response.propertyListing} />
+          <FavouriteCard {...response} />
           <div>{_id} </div>
         </div>
       ))}
