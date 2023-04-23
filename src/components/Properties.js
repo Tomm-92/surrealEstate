@@ -39,6 +39,7 @@ const Properties = ({ userID }) => {
   };
 
   useEffect(() => {
+    setAlert({ message: "", isSuccess: false });
     axios
       .get("http://localhost:4000/api/v1/PropertyListing")
       .then(({ data }) => {
@@ -46,12 +47,13 @@ const Properties = ({ userID }) => {
       })
       .catch(() =>
         setAlert({
-          message: "Server error. Please come back later =(",
+          message: "Server error. Please come back later",
         })
       );
   }, []);
 
   useEffect(() => {
+    setAlert({ message: "", isSuccess: false });
     axios
       .get(`http://localhost:4000/api/v1/PropertyListing${search}`)
       .then(({ data }) => setProperties(data))

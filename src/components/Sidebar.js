@@ -33,9 +33,11 @@ const Sidebar = () => {
   };
   return (
     <div className="sidebar">
-      {" "}
       Sidebar
       <ul className="sidebar-links">
+        <Link className="sidebar-links-item" to="/favourite">
+          View Favourites
+        </Link>
         <Link
           className="sidebar-links-item"
           to={buildQueryString("sort", { price: 1 })}

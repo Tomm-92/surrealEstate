@@ -11,6 +11,7 @@ import {
 import NavBar from "./NavBar";
 import Properties from "./Properties";
 import AddProperty from "./AddProperty";
+import Favourites from "./Favourites";
 
 const App = () => {
   const [userID, setUserID] = useState("");
@@ -29,6 +30,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Properties userID={userID} />} />
           <Route path="/add-property" element={<AddProperty />} />
+          <Route path="/favourite" element={<Favourites />} />
         </Routes>
       </div>
     </Router>
