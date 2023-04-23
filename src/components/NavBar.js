@@ -14,7 +14,7 @@ const NavBar = ({ onLogin, userID, onLogout }) => {
           Add Properties
         </Link>
       </ul>
-      <div className="facebook-logIn">
+      <div className="facebook-log-in">
         {userID ? (
           <button type="submit" className="button-sign-out" onClick={onLogout}>
             Log Out
