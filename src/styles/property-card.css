@@ -1,6 +1,6 @@
 .property-card {
-  border: solid red 1px;
   width: 100%;
+  background-color: aliceblue;
 }
 
 .property-title {

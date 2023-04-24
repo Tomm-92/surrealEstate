@@ -1,12 +1,55 @@
+.add-property-wrapper {
+  background-color: red;
+}
+
 .add-property {
+  padding: 0px;
   color: black;
-  border: solid red 1px;
-  display: flex;
-  justify-content: center;
-  padding: 5px;
-  margin: 5px;
+  border: 2px solid black;
+  background-color: white;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 7.5%;
+  margin-bottom: 2%;
+  text-align: center;
+  background-image: url("../Images/house.png");
+  background-size: cover;
+}
+
+.add-property__submit-button {
+  color: white;
+  background-color: grey;
+  border-radius: 10%;
+  font-family: "Roboto Mono", monospace;
+  border: black;
+  margin-bottom: 20px;
+  font-size: x-large;
+  width: 10%;
+}
+
+.add-property__submit-button:hover {
+  color: black;
+}
+
+input {
+  font-family: "Roboto Mono", monospace;
+  border-radius: 4%;
+  border: solid 1px black;
+  text-align: center;
 }
 
 label {
   padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 7fr;
+  width: 200px;
+  margin: auto;
+  font-size: large;
+  font-weight: bold;
+}
+
+select {
+  font-family: "Roboto Mono", monospace;
+  border-radius: 4%;
 }

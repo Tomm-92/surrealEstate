@@ -1,10 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-const FavouriteCard = ({ _id, propertyListing }) => {
-  const handleDeleteFavourite = () => {
-    axios.delete(`http://localhost:4000/api/v1/Favourite/${_id}`);
-  };
+const FavouriteCard = ({ _id, propertyListing, onDelete }) => {
   return (
     <div className="favourite-card">
       <div> {propertyListing._id} </div>
@@ -12,7 +9,7 @@ const FavouriteCard = ({ _id, propertyListing }) => {
       <div>{propertyListing.city} </div>
       <div> {propertyListing.price} </div>
       <button
-        onClick={handleDeleteFavourite}
+        onClick={() => onDelete(_id)}
         type="submit"
         className="remove-favourite__submit-button"
       >

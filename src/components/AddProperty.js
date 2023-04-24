@@ -108,7 +108,6 @@ const AddProperty = () => {
             onChange={handleFieldChange}
           />
         </label>
-        <br />
         <label htmlFor="city">
           City:
           <select
