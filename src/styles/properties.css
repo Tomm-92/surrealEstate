@@ -1,10 +1,26 @@
 .properties {
+  margin: auto;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+.properties-flex {
+  color: black;
+  display: flex;
+  margin: auto -1rem 1rem;
+}
+
+.col {
+  margin-left: 0.1rem;
+  margin-right: 0.1rem;
   padding: 0.5rem;
 }
 
-.properties > .item {
-  display: inline-block;
-  width: 33.33%;
-  padding: 0.5rem;
-  box-sizing: border-box;
+.sidebar {
+  flex: 1;
+}
+
+.main {
+  flex: 4;
+  align-content: ;
 }

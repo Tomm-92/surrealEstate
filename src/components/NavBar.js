@@ -15,6 +15,11 @@ const NavBar = ({ onLogin, userID, onLogout }) => {
         <Link className="navbar-links-item" to="/add-property">
           Add Properties
         </Link>
+        {userID && (
+          <Link className="navbar-links-item" to="/favourite">
+            View Favourites
+          </Link>
+        )}
       </ul>
       <div className="facebook-log-in">
         {userID ? (

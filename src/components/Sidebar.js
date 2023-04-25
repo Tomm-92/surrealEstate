@@ -33,23 +33,7 @@ const Sidebar = () => {
   };
   return (
     <div className="sidebar">
-      Sidebar
       <ul className="sidebar-links">
-        <Link className="sidebar-links-item" to="/favourite">
-          View Favourites
-        </Link>
-        <Link
-          className="sidebar-links-item"
-          to={buildQueryString("sort", { price: 1 })}
-        >
-          Sort - Ascending
-        </Link>
-        <Link
-          className="sidebar-links-item"
-          to={buildQueryString("sort", { price: -1 })}
-        >
-          Sort - Descending
-        </Link>
         <Link
           className="sidebar-links-item"
           to={buildQueryString("query", { city: "Liverpool" })}
@@ -73,6 +57,18 @@ const Sidebar = () => {
           to={buildQueryString("query", { city: "Leeds" })}
         >
           Leeds
+        </Link>
+        <Link
+          className="sidebar-links-item"
+          to={buildQueryString("sort", { price: 1 })}
+        >
+          Sort - Ascending
+        </Link>
+        <Link
+          className="sidebar-links-item"
+          to={buildQueryString("sort", { price: -1 })}
+        >
+          Sort - Descending
         </Link>
       </ul>
       <form className="search-form" onSubmit={handleSearch}>

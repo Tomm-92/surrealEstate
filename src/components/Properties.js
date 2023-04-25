@@ -67,16 +67,22 @@ const Properties = ({ userID }) => {
   return (
     <div className="properties">
       <Alert message={alert.message} />
-      <Sidebar />
-      {properties.map((response) => (
-        <div key={response._id} className="item">
-          <PropertyCard
-            userID={userID}
-            {...response}
-            onSaveProperty={handleSaveProperty}
-          />
-        </div>
-      ))}
+      <div className="properties-flex">
+        <aside className="col sidebar">
+          <Sidebar />
+        </aside>
+        <section className="col main">
+          {properties.map((response) => (
+            <div key={response._id} className="item">
+              <PropertyCard
+                userID={userID}
+                {...response}
+                onSaveProperty={handleSaveProperty}
+              />
+            </div>
+          ))}
+        </section>
+      </div>
     </div>
   );
 };
