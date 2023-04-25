@@ -4,7 +4,7 @@ import Sidebar from "./Sidebar";
 import Alert from "./Alert";
 import FavouriteCard from "./FavouriteCard";
 
-const Favourites = () => {
+const Favourites = (userID) => {
   const [favourites, setFavourites] = useState([]);
   const [alert, setAlert] = useState({ message: "", isSuccess: false });
 
@@ -38,6 +38,8 @@ const Favourites = () => {
     });
     // .catchfor delete
   };
+
+  if (!userID) return <p> Please sign in to view your favourites! </p>;
 
   return (
     <div className="favourites">

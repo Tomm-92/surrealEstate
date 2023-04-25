@@ -30,7 +30,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Properties userID={userID} />} />
           <Route path="/add-property" element={<AddProperty />} />
-          <Route path="/favourite" element={<Favourites />} />
+          <Route path="/favourite" element={<Favourites userID={userID} />} />
         </Routes>
       </div>
     </Router>

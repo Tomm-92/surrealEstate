@@ -9,6 +9,7 @@
   width: 350px;
   display: -webkit-box;
   margin: auto;
+  mix-blend-mode: multiply;
 }
 
 .navbar-links {
